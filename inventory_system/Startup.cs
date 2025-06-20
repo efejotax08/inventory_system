@@ -27,7 +27,7 @@ namespace inventory_system
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("MySqlConnection");
+            var connectionString = Configuration.GetConnectionString("MySqlConnectionOnline");
             services.AddDbContext<InventoryContext>(options =>
         options.UseMySQL(connectionString)); // <- UseMySQL (del paquete de Oracle)
 
